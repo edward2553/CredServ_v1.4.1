@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credserv.persistencia;
+package parametrizaciones;
 
 import PageObjects.Login;
-import PageObjects.Vehiculo;
+import PageObjects.Servicios;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -21,14 +21,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author crist
  */
-public class AutomatizadaVehiculo {
+public class AutomatizadaServicio {
 
     private static WebDriver driver = null;
-    VehiculoParametrizacionesDAOTest vehiculoDAO = new VehiculoParametrizacionesDAOTest();
-    Vehiculo vehiculo = new Vehiculo(driver);
     Login log;
+    Servicios servicios = new Servicios(driver);
+    ServiciosParametrizacionesDAOTest ServiciosDAO = new ServiciosParametrizacionesDAOTest();
 
-    public AutomatizadaVehiculo() {
+    public AutomatizadaServicio() {
     }
 
     @BeforeClass
@@ -47,10 +47,11 @@ public class AutomatizadaVehiculo {
     @Before
     public void setUp() {
         //ponemos la pagina web
-        driver.get("http://localhost:8084/CredServ_v1.4/index.jsp");
+        driver.get("http://localhost:8084/CredServ_v1.4.1");
         // inicio de session
         log = new Login(driver);
         log.loginApplication("cristian_gomez23181@elpoli.edu.co", "cristiang");
+
     }
 
     @After
@@ -58,22 +59,20 @@ public class AutomatizadaVehiculo {
     }
 
     @Test
-    public void PruebaAutomatizadaInsertarVehiculo() {
+    public void PruebaAutomatizadaInsertarServicio() {
 
-        vehiculoDAO.TestAutomatizadaInsertarVehiculo(driver);
-
+        ServiciosDAO.TestAutomatizadaInsertarServicio(driver);
         Alert alert = driver.switchTo().alert();
-
         alert.accept();
 
     }
 
     @Test
-    public void AutomatizadaEditarVehiculo() {
+    public void PruebaAutomatizadaEditarServicio() {
 
-        vehiculoDAO.TestAutomatizadaEditarVehiculo(driver);
+        ServiciosDAO.TestAutomatizadaEditarServicio(driver);
+
         Alert alert = driver.switchTo().alert();
-
         alert.accept();
 
     }
@@ -81,10 +80,11 @@ public class AutomatizadaVehiculo {
     @Test
     public void PruebaAutomatizadaEliminarServicio() {
 
-        vehiculo.EliminarVehiculo();
+        servicios.EliminarServicio();
 
         Alert alert = driver.switchTo().alert();
         alert.accept();
 
     }
+
 }

@@ -64,13 +64,12 @@ public class integracionDatosServicio {
 
     @Before
     public void setUp() {
-        driver.get("http://localhost:8084/CredServ_v1.4/index.jsp");
+        driver.get("http://localhost:8084/CredServ_v1.4.1/index.jsp");
         // inicio de session
         String email = "cristian_gomez23181@elpoli.edu.co";
         String password = "cristiang";
         log = new Login(driver);
         log.loginApplication(email, password);
-
     }
 
     @After

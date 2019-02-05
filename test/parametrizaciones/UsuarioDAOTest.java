@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credserv.persistencia;
+package parametrizaciones;
 
 import com.credserv.entidades.Usuario;
+import com.credserv.persistencia.UsuarioDAO;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

@@ -3,26 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/datosServicio/automotor_servicio.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/src/java/com/credserv/utilidades/placaDebug.java</file>
             <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/ServiciosParametrizacionesDAOTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/src/java/PageObjects/Servicios.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/datosServicio/placaClienteTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/UsuarioDAOTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/VehiculoParametrizacionesDAOTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/AutomatizadaVehiculo.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/datosServicio/nombreClienteTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/PrecioParametrizacionesDAOTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/VehiculoJUnitTest.java</file>
             <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/integracion/integracionDatosServicio.java</file>
             <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/ServicioJUnitTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/src/java/com/credserv/utilidades/Conexion.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/ServicioDAOTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/datosServicio/apellidoClienteTest.java</file>
             <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/AutomatizadaPrecio.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/com/credserv/persistencia/AutomatizadaServicio.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/datosServicio/CedulaTest.java</file>
-            <file>file:/C:/Users/edwar/Desktop/programacion/java_netbeans/CredServ/CredServ_v1.4.1/test/datosServicio/horasCampo.java</file>
         </group>
     </open-files>
 </project-private>

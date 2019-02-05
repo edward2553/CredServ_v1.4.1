@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credserv.persistencia;
+package parametrizaciones;
 
 import PageObjects.Vehiculo;
 import com.credserv.entidades.EntidadVehiculo;
+import com.credserv.persistencia.ServiciosParametrizacionesDAO;
 import com.credserv.utilidades.camposDebug;
 import org.junit.After;
 import org.junit.AfterClass;

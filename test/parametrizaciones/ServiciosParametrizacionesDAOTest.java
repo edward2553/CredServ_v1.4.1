@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credserv.persistencia;
+package parametrizaciones;
 
 import PageObjects.Login;
 import PageObjects.Servicios;
 import com.credserv.entidades.EntidadServicio;
 import com.credserv.entidades.EntidadServiciosServiteca;
 import com.credserv.entidades.EntidadVehiculo;
+import com.credserv.persistencia.ServiciosParametrizacionesDAO;
 import com.credserv.utilidades.camposDebug;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;

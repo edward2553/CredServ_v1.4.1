@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credserv.persistencia;
+package prm_Precio;
 
 import com.credserv.entidades.EntidadServicio;
 import com.credserv.entidades.EntidadServiciosServiteca;
 import com.credserv.entidades.EntidadVehiculo;
+import com.credserv.persistencia.ServiciosParametrizacionesDAO;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
