@@ -17,6 +17,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
@@ -42,9 +43,9 @@ public class AutomatizadaPrecio {
     @BeforeClass
     public static void setUpClass() {
         //se especifiica el tipo de driver y su ubicación
-        System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
         //instanciamos el diver
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -55,7 +56,7 @@ public class AutomatizadaPrecio {
     @Before
     public void setUp() {
         //ponemos la pagina web
-        driver.get("http://localhost:8084/CredServ_v1.4/index.jsp");
+        driver.get("http://localhost:8084/CredServ_v1.4.1");
         // inicio de session
         log = new Login(driver);
         log.loginApplication("cristian_gomez23181@elpoli.edu.co", "cristiang");

@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto:700');
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-family: 'Roboto',sans-serif;
+}
+
+.mensajeError{
+    font-size: 35px;
+}
+
+.carousel-position{
+    bottom: 200px;
+}
+@media screen and (max-width:500px){
+    .carousel-position{
+        display: none;
+    }
+    
+    
+}
+
+div>center>a{
+    width: 200px;
+}
+
+.logo{
+
+}
+
+.CredServStrong{
+    position: relative; 
+    right:18px; 
+
+}

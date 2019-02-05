@@ -25,7 +25,7 @@ public class Conexion {
     public Connection obtenerConexion() {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "credservbd", "cristian");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "CREDSERV", "CREDSERV");
             System.out.println("Conexión exitosa");
         } catch (Exception e) {
             e.printStackTrace();

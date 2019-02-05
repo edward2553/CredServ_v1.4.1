@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Dosis');
+
+.navbar_item{
+    margin: 5px; 
+    color: #D62929; 
+    font-family: 'Dosis', sans-serif;
+    font-size: 23px;
+}
+
+.lineaHorizontal{
+    position: relative;
+    top:7px;
+}
+
+.navbar_title{
+        margin: 12px; 
+    color: #D62929; 
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 30px;
+}
+.CredServStrong{
+    position: relative; 
+    right:18px; 
+
+}
