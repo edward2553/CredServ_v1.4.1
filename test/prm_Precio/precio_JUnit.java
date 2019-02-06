@@ -20,11 +20,11 @@ import static org.junit.Assert.*;
  *
  * @author crist
  */
-public class PrecioParametrizacionesDAOTest {
+public class precio_JUnit {
     
     ServiciosParametrizacionesDAO dao = new ServiciosParametrizacionesDAO();
     
-    public PrecioParametrizacionesDAOTest() {
+    public precio_JUnit() {
     }
     
     @BeforeClass

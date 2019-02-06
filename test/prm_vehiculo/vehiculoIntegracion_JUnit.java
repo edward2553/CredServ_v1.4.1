@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parametrizaciones;
+package prm_vehiculo;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import prm_vehiculo.vehiculos_JUnit;
 
 /**
  *
  * @author crist
  */
-public class VehiculoJUnitTest {
+public class vehiculoIntegracion_JUnit {
     
-    public VehiculoJUnitTest() {
+    public vehiculoIntegracion_JUnit() {
     }
     
     @BeforeClass
@@ -40,10 +41,10 @@ public class VehiculoJUnitTest {
     @Test
     public void TestVehiculo(){
     
-        VehiculoParametrizacionesDAOTest TestVehiculo = new VehiculoParametrizacionesDAOTest();
+        vehiculos_JUnit TestVehiculo = new vehiculos_JUnit();
     
-        TestVehiculo.testExisteServicioMAYUS();
-        TestVehiculo.testExisteServicioMINUS();
+        TestVehiculo.testExisteVehiculoMAYUS();
+        TestVehiculo.testExisteVehiculoMINUS();
         TestVehiculo.testInsertarVehiculoCaractExtraños();
         TestVehiculo.testInsertarVehiculoEspaciosBlanco();
         TestVehiculo.testInsertarVehiculoNumeros();

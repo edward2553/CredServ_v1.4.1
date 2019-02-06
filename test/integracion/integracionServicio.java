@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parametrizaciones;
+package integracion;
 
+import prm_servicio.servicio_JUnit;
 import PageObjects.Login;
 import PageObjects.Servicios;
 import java.util.concurrent.TimeUnit;
@@ -16,19 +17,20 @@ import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import prm_servicio.servicio_JUnit;
 
 /**
  *
  * @author crist
  */
-public class AutomatizadaServicio {
+public class integracionServicio {
 
     private static WebDriver driver = null;
     Login log;
     Servicios servicios = new Servicios(driver);
-    ServiciosParametrizacionesDAOTest ServiciosDAO = new ServiciosParametrizacionesDAOTest();
+    servicio_JUnit ServiciosDAO = new servicio_JUnit();
 
-    public AutomatizadaServicio() {
+    public integracionServicio() {
     }
 
     @BeforeClass

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parametrizaciones;
+package integracion;
 
 import PageObjects.Login;
 import PageObjects.Vehiculo;
@@ -16,19 +16,20 @@ import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import prm_vehiculo.vehiculos_JUnit;
 
 /**
  *
  * @author crist
  */
-public class AutomatizadaVehiculo {
+public class integracionVehiculos {
 
     private static WebDriver driver = null;
-    VehiculoParametrizacionesDAOTest vehiculoDAO = new VehiculoParametrizacionesDAOTest();
+    vehiculos_JUnit vehiculoDAO = new vehiculos_JUnit();
     Vehiculo vehiculo = new Vehiculo(driver);
     Login log;
 
-    public AutomatizadaVehiculo() {
+    public integracionVehiculos() {
     }
 
     @BeforeClass

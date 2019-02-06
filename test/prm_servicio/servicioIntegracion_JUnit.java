@@ -3,22 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parametrizaciones;
+package prm_servicio;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import prm_servicio.servicio_JUnit;
 import static org.junit.Assert.*;
 
 /**
  *
  * @author crist
  */
-public class ServicioJUnitTest {
+public class servicioIntegracion_JUnit {
 
-    public ServicioJUnitTest() {
+    public servicioIntegracion_JUnit() {
     }
 
     @BeforeClass
@@ -35,12 +36,14 @@ public class ServicioJUnitTest {
 
     @After
     public void tearDown() {
+    
+        
     }
 
     @Test
     public void ServcioTest() {
         
-        ServiciosParametrizacionesDAOTest ServicioTest = new ServiciosParametrizacionesDAOTest();
+        servicio_JUnit ServicioTest = new servicio_JUnit();
         
         ServicioTest.testExisteServicioMAYUS();
         ServicioTest.testExisteServicioMinuscula();

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prm_Precio;
+package integracion;
 
 import PageObjects.Login;
 import PageObjects.Precio;
@@ -24,7 +24,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  *
  * @author crist
  */
-public class AutomatizadaPrecio {
+public class IntegracionPrecio {
 
     private static WebDriver driver;
     Login log;
@@ -37,7 +37,7 @@ public class AutomatizadaPrecio {
     String PrecioCarExt = "*";
     Precio precio = new Precio(driver);
 
-    public AutomatizadaPrecio() {
+    public IntegracionPrecio() {
     }
 
     @BeforeClass

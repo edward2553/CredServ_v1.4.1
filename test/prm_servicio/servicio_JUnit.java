@@ -1,12 +1,13 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parametrizaciones;
+package prm_servicio;
 
-import PageObjects.Vehiculo;
-import com.credserv.entidades.EntidadVehiculo;
+import PageObjects.Login;
+import PageObjects.Servicios;
+import com.credserv.entidades.EntidadServicio;
 import com.credserv.persistencia.ServiciosParametrizacionesDAO;
 import com.credserv.utilidades.camposDebug;
 import org.junit.After;
@@ -17,24 +18,26 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.openqa.selenium.WebDriver;
 
+
 /**
  *
  * @author crist
  */
-public class VehiculoParametrizacionesDAOTest {
+public class servicio_JUnit {
 
     ServiciosParametrizacionesDAO dao = new ServiciosParametrizacionesDAO();
-    EntidadVehiculo EntVehiculo;
-    String InsertVehiculo = "BICICLETA";
-    String EditarVehiculo = "MOTO";
+    EntidadServicio Entservicio;
+    String InsertServicio = "CAMBIO DE MOTOR";
+    String EditarServicio = "CAMBIO DE VOLANTE";
     camposDebug obj_servicio = new camposDebug();
-    int idVehiculo;
+    int idServicio;
 
-    public VehiculoParametrizacionesDAOTest() {
+    public servicio_JUnit() {
     }
 
     @BeforeClass
     public static void setUpClass() {
+
     }
 
     @AfterClass
@@ -43,6 +46,7 @@ public class VehiculoParametrizacionesDAOTest {
 
     @Before
     public void setUp() {
+
     }
 
     @After
@@ -50,17 +54,17 @@ public class VehiculoParametrizacionesDAOTest {
     }
 
     /**
-     * Prueba de que el vehiculo existe, poniendo el nombre de servicio en
+     * Prueba de que el servicio existe, poniendo el nombre de servicio en
      * Mayuscula
      */
     @Test
     public void testExisteServicioMAYUS() {
-        System.out.println("existeVehiculoMayus");
+        System.out.println("existeServicio");
 
-        String vehiculo = "BUS";
+        String servicio = "LAVADO";
 
-        EntVehiculo = new EntidadVehiculo(vehiculo);
-        boolean validar2 = dao.existeVehiculo(EntVehiculo);
+        Entservicio = new EntidadServicio(servicio);
+        boolean validar2 = dao.existeServicio(Entservicio);
 
         boolean validar = true;
 
@@ -68,17 +72,17 @@ public class VehiculoParametrizacionesDAOTest {
     }
 
     /**
-     * Prueba de que el vehiculo existe, poniendo el nombre de servicio en
+     * Prueba de que el servicio existe, poniendo el nombre de servicio en
      * Minuscula
      */
     @Test
-    public void testExisteServicioMINUS() {
-        System.out.println("existeVehiculoMinus");
+    public void testExisteServicioMinuscula() {
+        System.out.println("existeServicio");
 
-        String vehiculo = "bus";
+        String servicio = "lavado";
 
-        EntVehiculo = new EntidadVehiculo(vehiculo.toUpperCase());
-        boolean validar2 = dao.existeVehiculo(EntVehiculo);
+        Entservicio = new EntidadServicio(servicio.toUpperCase());
+        boolean validar2 = dao.existeServicio(Entservicio);
 
         boolean validar = true;
 
@@ -90,8 +94,8 @@ public class VehiculoParametrizacionesDAOTest {
      * caracteres extraños
      */
     @Test
-    public void testInsertarVehiculoCaractExtraños() {
-        System.out.println("insertarVehiculoCaracExtraños");
+    public void testInsertarServicioCaractExtraños() {
+        System.out.println("insertarServicioCaracExtraños");
 
         String caracRaros = "*";
         int h = 0;
@@ -108,8 +112,8 @@ public class VehiculoParametrizacionesDAOTest {
      * blanco
      */
     @Test
-    public void testInsertarVehiculoEspaciosBlanco() {
-        System.out.println("insertarVehiculoEspacBlanco");
+    public void testInsertarServicioEspaciosBlanco() {
+        System.out.println("insertarServicioEspacBlanco");
 
         String espcBlanco = "  ";
 
@@ -124,8 +128,8 @@ public class VehiculoParametrizacionesDAOTest {
      * Prueba de insertar un servicio, poniendo en campo servicio numeros
      */
     @Test
-    public void testInsertarVehiculoNumeros() {
-        System.out.println("insertarVehiculoNumeros");
+    public void testInsertarServicioNumeros() {
+        System.out.println("insertarServicioNumeros");
 
         int servicio = 1;
 
@@ -137,7 +141,7 @@ public class VehiculoParametrizacionesDAOTest {
     }
 
     /**
-     * Prueba de insertar un vehiculo, el método es int para que nos retorne el
+     * Prueba de insertar un servicio, el método es int para que nos retorne el
      * id del servicio y en la clase de ServicioJUnit lo guardamos en una
      * variable para así utilizarla para borrar y editar un servicio.
      */
@@ -145,58 +149,59 @@ public class VehiculoParametrizacionesDAOTest {
     public int testInsertarServicio() {
         System.out.println("insertarServicio");
 
-        EntVehiculo = new EntidadVehiculo(InsertVehiculo);
+        Entservicio = new EntidadServicio(InsertServicio.toUpperCase());
 
-        boolean validar = dao.insertarVehiculo(EntVehiculo);
-        idVehiculo = dao.BuscarVehiculoTEST(InsertVehiculo);
+        boolean validar = dao.insertarServicio(Entservicio);
+        idServicio = dao.BuscarServicioTEST(InsertServicio);
 
         boolean validar2 = true;
 
         assertEquals(validar2, validar);
 
-        return idVehiculo;
+        return idServicio;
 
     }
 
     /**
-     * Prueba para editar un vehiculo
+     * Prueba para editar un servicio
      */
     @Test
-    public void testEditarVehiculo(int vehiculo) {
+    public void testEditarServicio(int servicio) {
         System.out.println("EditarServicio");
 
-        EntVehiculo = new EntidadVehiculo(EditarVehiculo, vehiculo);
-        boolean validar = dao.EditarVehiculo(EntVehiculo);
+        Entservicio = new EntidadServicio(EditarServicio, servicio);
+        boolean validar = dao.EditarServicio(Entservicio);
         boolean validar2 = true;
 
         assertEquals(validar2, validar);
     }
 
     /**
-     * Prueba de Eliminar un vehiculo por ID
+     * Prueba de Eliminar un servicio por ID
      */
     @Test
-    public void testEliminarVehiculo(int vehiculo) {
+    public void testEliminarServicios(int servicio) {
         System.out.println("EliminarServicios");
 
-        boolean validar = dao.EliminarVehiculos(vehiculo);
+        boolean validar = dao.EliminarServicios(servicio);
         boolean validar2 = true;
 
         assertEquals(validar, validar2);
     }
 
-    public void TestAutomatizadaInsertarVehiculo(WebDriver driver) {
-        Vehiculo vehiculo = new Vehiculo(driver);
+    public void TestAutomatizadaInsertarServicio(WebDriver driver) {
+        Servicios servicios = new Servicios(driver);
 
-        vehiculo.InsertarVehiculo(InsertVehiculo);
+        servicios.InsertarServicio(InsertServicio);
+
+    }
+
+    public void TestAutomatizadaEditarServicio(WebDriver driver) {
+
+        Servicios servicios = new Servicios(driver);
+
+        servicios.EditarServicio(EditarServicio);
 
     }
 
-    public void TestAutomatizadaEditarVehiculo(WebDriver driver) {
-
-        Vehiculo vehiculo = new Vehiculo(driver);
-
-        vehiculo.EditarVehiculo(EditarVehiculo);
-
-    }
 }
