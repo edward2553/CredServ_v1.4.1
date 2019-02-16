@@ -5,9 +5,9 @@ package integracion;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import PageObjects.CosteoYfacturacion;
-import PageObjects.DatosServicio;
-import PageObjects.Login;
+import POM.CosteoYfacturacion;
+import POM.DatosServicio;
+import POM.Login;
 import datosServicio.CedulaTest;
 import datosServicio.apellidoClienteTest;
 import datosServicio.automotor_servicio;

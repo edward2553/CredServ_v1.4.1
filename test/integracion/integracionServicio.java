@@ -6,8 +6,8 @@
 package integracion;
 
 import prm_servicio.servicio_JUnit;
-import PageObjects.Login;
-import PageObjects.Servicios;
+import POM.Login;
+import POM.Servicios;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -44,6 +44,7 @@ public class integracionServicio {
 
     @AfterClass
     public static void tearDownClass() {
+        driver.quit();
     }
 
     @Before
@@ -61,8 +62,8 @@ public class integracionServicio {
     }
 
     @Test
-    public void PruebaAutomatizadaInsertarServicio() {
-
+    public void PruebaAutomatizadaInsertarServicio() throws InterruptedException {
+        Thread.sleep(1000);
         ServiciosDAO.TestAutomatizadaInsertarServicio(driver);
         Alert alert = driver.switchTo().alert();
         alert.accept();
@@ -70,8 +71,8 @@ public class integracionServicio {
     }
 
     @Test
-    public void PruebaAutomatizadaEditarServicio() {
-
+    public void PruebaAutomatizadaEditarServicio() throws InterruptedException {
+        Thread.sleep(1000);
         ServiciosDAO.TestAutomatizadaEditarServicio(driver);
 
         Alert alert = driver.switchTo().alert();
@@ -80,8 +81,8 @@ public class integracionServicio {
     }
 
     @Test
-    public void PruebaAutomatizadaEliminarServicio() {
-
+    public void PruebaAutomatizadaEliminarServicio() throws InterruptedException {
+        Thread.sleep(1000);
         servicios.EliminarServicio();
 
         Alert alert = driver.switchTo().alert();

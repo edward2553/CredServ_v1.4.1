@@ -5,8 +5,8 @@
  */
 package integracion;
 
-import PageObjects.Login;
-import PageObjects.Precio;
+import POM.Login;
+import POM.Precio;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 /**
  *
@@ -51,6 +51,7 @@ public class IntegracionPrecio {
 
     @AfterClass
     public static void tearDownClass() {
+        driver.quit();
     }
 
     @Before
@@ -85,7 +86,8 @@ public class IntegracionPrecio {
     //Test de insertar precio 999, que seria el valor anterior al limite inferior
     //que es 1000
     @Test
-    public void InsertarPrecioLimiteInferior() {
+    public void InsertarPrecioLimiteInferior() throws InterruptedException {
+        Thread.sleep(1000);
         precio.IngresarPrecioMenorACero(PrecioLiAnInfe);
 
         Alert alert = driver.switchTo().alert();
@@ -101,7 +103,8 @@ public class IntegracionPrecio {
     //Test de insertar precio 2000001, que seria el valor después al limite superior
     //que es 1000
     @Test
-    public void InsertarPrecioLimiteSuperior() {
+    public void InsertarPrecioLimiteSuperior() throws InterruptedException {
+        Thread.sleep(1000);
         precio.IngresarPrecioMenorACero(PrecioLiDesSup);
 
         Alert alert = driver.switchTo().alert();
@@ -116,7 +119,8 @@ public class IntegracionPrecio {
 
     //Test de insertar precio dejando los select en Elija un tipo de servicio
     @Test
-    public void InsertarPrecioSinSelect() {
+    public void InsertarPrecioSinSelect() throws InterruptedException {
+        Thread.sleep(1000);
         precio.IngresarPrecioSinSelect(PrecioSele);
 
         Alert alert = driver.switchTo().alert();
@@ -131,7 +135,8 @@ public class IntegracionPrecio {
 
     //Test de insertar precio dejando los select en, elija un tipo de servicio
     @Test
-    public void InsertarPrecioSelectServi() {
+    public void InsertarPrecioSelectServi() throws InterruptedException {
+        Thread.sleep(1000);
         precio.IngresarPrecioSelecServicio(PrecioSele);
 
         Alert alert = driver.switchTo().alert();
@@ -146,7 +151,8 @@ public class IntegracionPrecio {
 
     //Test de insertar precio dejando los select en, elija un tipo de servicio
     @Test
-    public void InsertarPrecioSelectVehicu() {
+    public void InsertarPrecioSelectVehicu() throws InterruptedException {
+        Thread.sleep(1000);
         precio.IngresarPrecioSelecVehiculo(PrecioSele);
 
         Alert alert = driver.switchTo().alert();
@@ -162,7 +168,8 @@ public class IntegracionPrecio {
     //Test de editar precio 999, que seria el valor anterior al limite inferior
     //que es 1000
     @Test
-    public void EditarPrecioLimiteInferior() {
+    public void EditarPrecioLimiteInferior() throws InterruptedException {
+        Thread.sleep(1000);
         precio.EditarPrecioLimiInfe(PrecioLiAnInfe);
 
         Alert alert = driver.switchTo().alert();
@@ -178,7 +185,8 @@ public class IntegracionPrecio {
     //Test de editar precio 999, que seria el valor depués al limite superior
     //que es 1000
     @Test
-    public void EditarPrecioLimiteSuperior() {
+    public void EditarPrecioLimiteSuperior() throws InterruptedException {
+        Thread.sleep(1000);
         precio.EditarPrecioLimiInfe(PrecioLiDesSup);
 
         Alert alert = driver.switchTo().alert();
@@ -193,7 +201,8 @@ public class IntegracionPrecio {
 
     //Test de insertar precio 
     @Test
-    public void PruebaInsertarPrecio() {
+    public void PruebaInsertarPrecio() throws InterruptedException {
+        Thread.sleep(1000);
         precio.IngresarPrecio(PrecioSele);
 
         Alert alert = driver.switchTo().alert();
@@ -202,16 +211,18 @@ public class IntegracionPrecio {
 
     //Test de editar precio 
     @Test
-    public void PruebaEditarPrecio() {
+    public void PruebaEditarPrecio() throws InterruptedException {
+
         precio.EditarPrecio(EditarPrecio);
 
         Alert alert = driver.switchTo().alert();
         alert.accept();
     }
-    
-     //Test de editar precio 
+
+    //Test de editar precio 
     @Test
-    public void PruebaEliminarPrecio() {
+    public void PruebaEliminarPrecio() throws InterruptedException {
+        Thread.sleep(1000);
         precio.EliminarPrecio();
 
         Alert alert = driver.switchTo().alert();

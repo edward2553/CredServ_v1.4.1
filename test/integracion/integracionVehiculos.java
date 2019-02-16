@@ -5,8 +5,8 @@
  */
 package integracion;
 
-import PageObjects.Login;
-import PageObjects.Vehiculo;
+import POM.Login;
+import POM.Vehiculo;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -43,12 +43,13 @@ public class integracionVehiculos {
 
     @AfterClass
     public static void tearDownClass() {
+        driver.quit();
     }
 
     @Before
     public void setUp() {
         //ponemos la pagina web
-        driver.get("http://localhost:8084/CredServ_v1.4/index.jsp");
+        driver.get("http://localhost:8084/CredServ_v1.4.1/index.jsp");
         // inicio de session
         log = new Login(driver);
         log.loginApplication("cristian_gomez23181@elpoli.edu.co", "cristiang");
@@ -69,7 +70,7 @@ public class integracionVehiculos {
 
     }
 
-    @Test
+   @Test
     public void AutomatizadaEditarVehiculo() {
 
         vehiculoDAO.TestAutomatizadaEditarVehiculo(driver);
@@ -80,7 +81,7 @@ public class integracionVehiculos {
     }
 
     @Test
-    public void PruebaAutomatizadaEliminarServicio() {
+    public void PruebaAutomatizadaEliminarVehiculo() {
 
         vehiculo.EliminarVehiculo();
 

@@ -119,6 +119,23 @@ public class camposDebug {
         }
 
     }
+        public boolean negativos(String dato) {
+
+        int longi = Integer.parseInt(dato);
+        if (longi > 1 ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public boolean longitud_edad(String edad){
+        if (edad.length() == 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     public boolean caracteresRarosEceptocedula(char[] palabra, int i) {
 
@@ -186,5 +203,20 @@ public class camposDebug {
             return caracteresRaros(palabra, i += 1);
         }
 
+    }
+        
+    public boolean valorVacio(String campo){
+         if (campo.equalsIgnoreCase("")){
+             return true;
+         }
+         return false;
+    }
+
+     public boolean longitud_telefono(String telefono){
+        if (telefono.length() == 7) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ IMPORTANTE
+en esta clase se integran los casos de prueba de la clase vehiculos_JUnit 
  */
 package prm_vehiculo;
 

@@ -5,7 +5,7 @@
  */
 package datosServicio;
 
-import PageObjects.DatosServicio;
+import POM.DatosServicio;
 import com.credserv.utilidades.camposDebug;
 import com.credserv.utilidades.placaDebug;
 import org.junit.After;

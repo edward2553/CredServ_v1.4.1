@@ -5,8 +5,8 @@
  */
 package prm_servicio;
 
-import PageObjects.Login;
-import PageObjects.Servicios;
+import POM.Login;
+import POM.Servicios;
 import com.credserv.entidades.EntidadServicio;
 import com.credserv.persistencia.ServiciosParametrizacionesDAO;
 import com.credserv.utilidades.camposDebug;

@@ -5,8 +5,8 @@
  */
 package datosServicio;
 
-import PageObjects.DatosServicio;
-import PageObjects.Login;
+import POM.DatosServicio;
+import POM.Login;
 import com.credserv.utilidades.camposDebug;
 import org.junit.After;
 import org.junit.AfterClass;

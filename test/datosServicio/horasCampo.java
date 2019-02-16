@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package datosServicio;
-import PageObjects.DatosServicio;
+import POM.DatosServicio;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

@@ -5,7 +5,7 @@
  */
 package prm_vehiculo;
 
-import PageObjects.Vehiculo;
+import POM.Vehiculo;
 import com.credserv.entidades.EntidadVehiculo;
 import com.credserv.persistencia.ServiciosParametrizacionesDAO;
 import com.credserv.utilidades.camposDebug;

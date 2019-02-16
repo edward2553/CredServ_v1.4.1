@@ -1,3 +1,4 @@
+<%@page import="java.io.File"%>
 <%@page import="com.credserv.entidades.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -71,7 +72,37 @@
                     tiempo promedio
                 -->
                 <div>
-                    
+                    <table class="table">
+                        <thead>
+                        <th>Archivo</th>
+                        <th>Acción</th>
+                        </thead>
+                        <%
+                            File ruta = new File("C:\\Users\\edwar\\Desktop\\programacion\\java_netbeans\\CredServ\\CredServ_v1.4.1\\web\\archivos_informes");
+                            String[] nombreArchivo = ruta.list();
+                            for (int i = 0; i < nombreArchivo.length; i++) {
+
+                        %>      
+
+                        <tbody id="MyTable">
+                            <tr>
+                                <td>
+                                
+                                <%=nombreArchivo[i] %>
+                                    
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" href="../consultaInformes.jsp?nombreInforme=<%=nombreArchivo[i] %>"> Ver</a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <%  }
+                        %>
+
+
+                    </table>
+
                 </div>
 
 

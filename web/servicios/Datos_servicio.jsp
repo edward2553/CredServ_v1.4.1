@@ -101,6 +101,7 @@
                         <div class="row">
                             <div>Turno</div>
                             <input type="text" name="txtTurno" readonly="" class="form-control" value="<%=turnoAleatorio%>">
+                            <input type="text" id="turnoChingon" hidden="" value="<%=turnoAleatorio%>" >
                         </div>
                         <br>
                         <!-- FORMULARIO REGISTRAR SERVICIO -->
@@ -110,8 +111,8 @@
                         <div class="row">
 
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-                                <h5>Cédula</h5>
-                                <input class="form-control " type="number" required="" name="txtCedula" maxlength="30">
+                                <h5>Cedula</h5>
+                                <input class="form-control " type="text" required="" name="txtCedula" maxlength="30">
                             </div>
                         </div>
                         <br>
@@ -140,7 +141,7 @@
                             </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                <h5>Tipo de vehículo</h5>
+                                <h5>Tipo de vehiculo</h5>
 
                                 <!-- MODAL tipo de vehiculo --> 
                                 <button type="button" class="btn btn-default btn-md btn-block" data-toggle="modal" data-target="#myModal">Seleccionar vehículos</button>
@@ -152,12 +153,13 @@
                                         <!-- Modal content-->
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="modal-title">Seleccione los vehículos del cliente</h4>
+                                                <h4 class="modal-title">Selecciones los vehiculos del cliente</h4>
                                             </div>
                                             <div class="modal-body">                                                
 
                                                 <%                                                  
                                                     ResultSet rs = con.obtenerConexion().prepareStatement("select * FROM TIPO_VEHICULO_SERVITECA").executeQuery();
+                                                   
                                                     while (rs.next()) {
 
                                                 %>
